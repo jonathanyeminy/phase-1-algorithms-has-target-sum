@@ -1,13 +1,27 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let e=0; e < array.length; e++) {
+    let complement = target - array[e] 
+    // console.log(complement)
+    for (let i=e+1; i < array.length; i++) {
+      if (array[i] === complement){
+        return true
+    }
+      }
+  }
+  return false
 }
-
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+  This should iterate over element item in the array and check if that number
+  plus any other number in the array is equal to the target number.
+  If it encounters a true, it will return true, if it reaches the end of the
+  array, it should move to the next number. If it reaches the end with no matches,
+  it should return false.
 */
 
 /*
